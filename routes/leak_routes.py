@@ -19,3 +19,16 @@ def get_leak_defects():
 
     results = run_query(sql, (start_date, end_date))
     return jsonify(results)
+
+
+@leak_bp.route("/api/leak_pareto_demo", methods=["GET"])
+def get_leak_pareto_demo():
+    demo_data = [
+        {"name": "Leak", "value": 30},
+        {"name": "Seal Fail", "value": 25},
+        {"name": "Connector Defect", "value": 15},
+        {"name": "Crack", "value": 10},
+        {"name": "Scratch", "value": 8},
+        {"name": "Other", "value": 5},
+    ]
+    return jsonify(demo_data)
