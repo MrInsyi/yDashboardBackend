@@ -7,7 +7,7 @@ leak_bp = Blueprint("leak_bp", __name__)
 @leak_bp.route("/api/leak_defects", methods=["GET"])
 def get_leak_defects():
     today = date.today()
-    start_date = request.args.get("start", (today - timedelta(days=7)).isoformat())
+    start_date = request.args.get("start", (today - timedelta(days=7)).isoformat()) #get("start", (today - timedelta(days=7)).isoformat())
     end_date = request.args.get("end", today.isoformat())
 
     if not start_date or not end_date:

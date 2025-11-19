@@ -23,7 +23,7 @@ def get_leak_hourly():
 def get_leak_hourly_demo():
     # optional: simulate dynamic parameters
     station_id = request.args.get("station_id", "10")
-    date = request.args.get("date", "2025-10-29")
+    date = request.args.get("date", "2025-11-19")
 
     # fake hourly data for demo
     demo_data = [
